@@ -1,0 +1,6 @@
+<h1>Robots</h1>
+<%= form_tag('/mars', method: 'post') do %>
+    <%= label_tag(:payload, 'Commands to mars') %>
+    <%= text_area_tag(:payload) %>
+    <%= submit_tag('Send') %>
+<% end %>
