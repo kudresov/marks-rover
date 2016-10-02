@@ -1,24 +1,61 @@
-# README
+# Mars Robots
+This is an exercise to control robots on mars. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Approach
+Ruby and Rails where chosen not because it's a best fit, (Node.js is probably a better fit for this particular problems) but because this is the setup I currently have and it easy to get going.
+I normally build code in TDD fashion, especially when dealing with dynamic languages like Ruby. This solution has a limited number of tests and in production scenario would have a better coverage.
 
-Things you may want to cover:
+# Corners cut
+As the task has to take couple of hours I did intentionally cut quite a few corners and the result code is very far from production quality. Below I have outlined some of the things I compromised on and which I can go over and explain how they need to be done correctly.
 
-* Ruby version
+## Rest
+This application's routes and controllers aren't very restful and could be improved
 
-* System dependencies
+## Tests
+- Very few tests 
+- No good rspec structuring
+- Tests need refactoring
+- No routing, controllers, integration tests
+- No factories use to build test objects
 
-* Configuration
+## Error handling
+- A lot of error cases are not covered
+- No user input validation
+- No exception handling
 
-* Database creation
+## Code refactoring
+- Better naming
+- Make code more DRY
+- logic could be simplified
 
-* Database initialization
+## Interface
+Interface is very rudimental and could be improved
+ 
+## Project structure
+- better code structure
+- removed unused Rails features
+- removed unused folders
 
-* How to run the test suite
+# Running project
 
-* Services (job queues, cache servers, search engines, etc.)
+## Prerequisite
 
-* Deployment instructions
+Ruby 2.2.4
 
-* ...
+## Running
+
+To run tests: `rake`
+To run server locally: `rails server`
+
+Sample input:
+```
+5 3
+1 1 E
+RFRFRFRF
+
+3 2 N
+FRRFLLFFRRFLL
+
+0 3 W
+LLFFFLFLFL
+```
